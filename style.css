@@ -1,60 +1,58 @@
 
 @import url('https://fonts.googleapis.com/css?family=Oswald:500|Roboto:100,300');
+
+@import url('https://fonts.googleapis.com/css?family=Muli:300, 800');
 :root{
-    --headerFont: 'Oswald';
-    --mainFont: 'Roboto';
-    --black: #000;
-    --white: #CCC;
+    --headerFont: 'Muli';
+    --mainFont: 'Muli';
+    --black: #222;
+    --white: #FFF;
     --whiter: #FFF;
     --mainColor: #ff2b00;
-    --color1: #000;
-    --color2: #CCC;
-    --color3: #000;
-    --color4: #CCC;
+    --color1: #fd7b23;
+    --color2: #fec2b1;
+    --color3: #ff5e3e;
+    --color4: #f8c22d;
+    --shadow1: 0 0 10px rgba(0,0,0,0.5);
+    --shadow2: 0 0 20px rgba(0,0,0,0.5);
+    --shadow3: 0 0 30px rgba(0,0,0,0.5);
 }
 
 
 
 h1, h2, h3{
     font-family: var(--headerFont);
-    padding:0;
-    margin:0;
     line-height: .9;
+    font-weight: 800;
 }
 
 h1{
-    font-size: 6em;
+    font-size: 5.5em;
 }
 
 h2{
-    font-size: 4em;
+    font-size: 3.5em;
 }
 
 h3{
-    font-size: 2em;
+    font-size: 2.5em;
 }
 
 p{
-    font-family: 'Roboto';
+    font-family: var(--mainFont);
+    font-weight: 300;
     font-size: 1.3em;
 }
 
 #block1 h1{
     color: var(--whiteish);
 }
-
-#superEmph{
-    text-shadow: -2px 0 var(--mainColor),  
-    2px -2px 0 var(--mainColor),
-    -2px 2px 0 var(--mainColor),
-     2px 2px 0 var(--mainColor);
-}
-
 html body {
     padding:0;
 	width: 100%;
 	height: 100%;
 	margin: 0;
+    overflow-x: hidden;
 }
 
 body {
@@ -92,6 +90,8 @@ body {
     justify-content: space-around;
     flex-wrap: wrap;
     padding: 2%;
+    box-shadow: var(--shadow3);
+    font-family: var(--mainFont);
 }
 
 #navbar a{
@@ -144,6 +144,7 @@ b{
     margin-bottom: .5%;
     padding: 2%;
     margin-top: 5%;
+    box-shadow: var(--shadow2);
 }
 
 #qa #question{
@@ -203,15 +204,50 @@ b{
     color: var(--whiter);
     transition: .5s;
     background: var(--color1);
-    border: .5vh solid var(--color2);
+    border: .5vh solid var(--color1);
     width: 100%;
     display: table;
     margin-bottom: 2%;
+    box-shadow: var(--shadow2);
 }
 
 #block4 a:hover{
     transition: .3s;
-    border: .5vh solid var(--color2);
+    border: .5vh solid var(--color1);
     background: var(--whiter);
-    color: var(--color2);
+    color: var(--color3);
+    box-shadow: var(--shadow3);
+    transform:scale(1.05);
+}
+
+#block1, #block2, #block3, #block4{
+    box-shadow: var(--shadow3);
+    padding: 12vh 5% 12vh 5%;
+}
+
+.arrow{
+    position: absolute;
+    display:flex;justify-content:center;align-items:flex-end;
+    width: 100vw;
+    bottom:-10px;
+    
+    filter: drop-shadow(0 0 20px rgba(0,0,0,0.2s));
+}
+
+.arrow img{
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(50);
+    animation: bounce 4s infinite;
+}
+
+@keyframes bounce{
+    from{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+    to{
+        transform: translateY(0);
+    }
 }
