@@ -85,7 +85,7 @@ body {
     display: flex;
     position: sticky;
     top: -1px;
-    
+
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -230,14 +230,14 @@ b{
     display:flex;justify-content:center;align-items:flex-end;
     width: 100vw;
     bottom:-10px;
-    
+
     filter: drop-shadow(0 0 20px rgba(0,0,0,0.2s));
 }
 
 .arrow img{
     animation-iteration-count: infinite;
     animation-timing-function: cubic-bezier(50);
-    animation: bounce 4s infinite;
+    animation: bounce 2s infinite;
 }
 
 @keyframes bounce{
