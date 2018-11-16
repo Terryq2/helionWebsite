@@ -6,13 +6,16 @@
     --white: #FFF;
     --whiter: #FFF;
     --mainColor: #dddea0;
+    --color1: #020107;
     --color2: #ffa700;
     --color3: #ff4000;
     --color4: #b80000;
     --color5: #402929;
-    --shadow1: 0 0 10px rgba(0,0,0,0.5);
-    --shadow2: 0 0 20px rgba(0,0,0,0.5);
-    --shadow3: 0 0 30px rgba(0,0,0,0.5);
+    --color6: #020107;
+    --shadow1: 0 0 10px rgba(0,0,0,0.2);
+    --shadow2: 0 0 20px rgba(0,0,0,0.2);
+    --shadow3: 0 0 50px rgba(0,0,0,.3);
+    --fullshadow: 0 0 200px rgba(0,0,0,0.6);
 }
 
 /* Set a background color */
@@ -27,7 +30,20 @@ html body {
 }
 
 .timeline {
-  padding-left: 150px;
+  padding-left: 12%;
+}
+
+.slider {
+  position: fixed;
+  left: 0;
+  height: 100%;
+  width: 12%;
+  background-color: var(--color1);
+  box-shadow: var(--shadow3);
+}
+
+.content {
+  padding-right: 40px;
 }
 
 .container {
@@ -35,11 +51,18 @@ html body {
   margin: 0px;
   padding: 5px;
   padding-left: 20px;
+  box-shadow: var(--shadow1);
 }
 
 .container:hover {
-  transition: .5s;
-  transform: scale(1.05);
+  transition: .3s;
+  transform: scaleY(1.2);
+  box-shadow: var(--fullshadow);
+}
+
+.container:hover .content {
+  transition: .3s;
+  transform: scaleY(0.83);
 }
 
 .container p {
@@ -76,4 +99,13 @@ html body {
 
 #brown {
   background-color: var(--color5);
+}
+
+@media only screen and (max-width: 550px) {
+  .timeline{
+    padding-left: 20%;
+  }
+  .slider {
+    width: 20%;
+  }
 }
