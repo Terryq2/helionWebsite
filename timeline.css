@@ -13,9 +13,9 @@
     --color5: #402929;
     --color6: #020107;
     --shadow1: 0 0 10px rgba(0,0,0,0.2);
-    --shadow2: 0 0 20px rgba(0,0,0,0.2);
+    --shadow2: 0 0 60px rgba(255,255,255,0.75);
     --shadow3: 0 0 50px rgba(0,0,0,.3);
-    --fullshadow: 0 0 200px rgba(0,0,0,0.6);
+    --fullshadow: 0 0 400px rgba(0,0,0,0.6);
 }
 
 /* Set a background color */
@@ -53,6 +53,8 @@ html body {
 }
 
 .container {
+  position: relative;
+  z-index: 1;
   width: 100%;
   margin: 0px;
   padding: 5px;
@@ -64,6 +66,7 @@ html body {
   transition: .3s;
   transform: scaleY(1.2);
   box-shadow: var(--fullshadow);
+  z-index: 1000000;
 }
 
 .container:hover .content {
@@ -87,7 +90,21 @@ html body {
   margin-bottom: 0;
 }
 
+#bar {
+  background-color: white;
+  width: 5px;
+  height: 80%;
+  position: relative;
+  top: 15%
+  left: 48%;
+  z-index: 0;
+  box-shadow: 0 0 20px rgb(255, 255, 255, 1)
+}
+
 .circle {
+  box-shadow: var(--shadow2);
+  z-index: 1;
+  position: relative;
   border-radius: 50%;
   width: 35px;
   height: 35px;
@@ -97,12 +114,37 @@ html body {
   margin: 0 auto;
 }
 
-#first {
+.circle:hover {
+  box-shadow: var(--shadow2)
+}
 
+#first {
+  top: 6%;
+}
+
+#second {
+  top: 19%;
+}
+
+#third {
+  top: 32%;
+}
+
+#fourth {
+  top: 45%;
+}
+
+#fifth {
+  top: 58%;
+}
+
+#sixth {
+  top: 80%;
 }
 
 #star {
-  z-index: -1;
+  position: fixed;
+  z-index: -2;
 }
 
 #yellow {
