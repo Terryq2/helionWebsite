@@ -47,6 +47,11 @@ p{
 #block1 h1{
     color: var(--whiteish);
 }
+
+html{
+    scroll-behavior: smooth;
+}
+
 html body {
     padding:0;
 	width: 100%;
@@ -64,7 +69,7 @@ body {
 }
 
 
-#block1{
+#block-introduction{
     background: var(--color1);
     color:var(--whiteish);
     font-weight: 100;
@@ -117,16 +122,16 @@ b{
     font-weight: 300;
 }
 
-#block2{
+#block-mission-statement{
     background: var(--color2);
     color: var(--black);
     padding: 5%;
 }
-#block2 h2, #block2 p{
+#block-mission-statement h2, #block-mission-statement p{
     color: var(--black);
 }
 
-#block3{
+#block-faq{
     background: var(--color3);
     color: var(--black);
     padding: 5%;
@@ -186,21 +191,21 @@ b{
     font-weight: 300;
 }
 
-#block4{
+#block-contacts{
     background: var(--color4);
     color: var(--black);
     padding: 5%;
 }
 
-#block4 h2, #block4 p, #block4 h3{
+#block-contacts h2, #block-contacts p, #block-contacts h3{
     color: var(--black);
 }
 
-#block4 h2{
+#block-contacts h2{
     text-align: center;
 }
 
-#block4 a{
+#block-contacts a{
     color: var(--whiter);
     transition: .5s;
     background: var(--color1);
@@ -211,7 +216,7 @@ b{
     box-shadow: var(--shadow2);
 }
 
-#block4 a:hover{
+#block-contacts a:hover{
     transition: .3s;
     border: .5vh solid var(--color1);
     background: var(--whiter);
@@ -220,7 +225,7 @@ b{
     transform:scale(1.05);
 }
 
-#block1, #block2, #block3, #block4{
+#block-introduction, #block-mission-statement, #block-faq, #block-contacts{
     box-shadow: var(--shadow3);
     padding: 12vh 5% 12vh 5%;
 }
