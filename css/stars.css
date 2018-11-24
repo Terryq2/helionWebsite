@@ -4,6 +4,7 @@
 	position: relative;
 	width: 100vw;
 	height: 100vh;
+	max-width: 100%;
 	background: linear-gradient(to bottom, #020107 0%, #201b46 100%);
 }
 

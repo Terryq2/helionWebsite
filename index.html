@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Helion FRC</title>
-    <link rel="stylesheet" href="./css/stars.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/stars.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
@@ -36,7 +37,7 @@
     </div>
     <!-- Introduction to Team -->
     <div id="block-introduction">
-        <div id="responsiveBlock">
+        <div class="responsiveBlock">
             <h1 style="color: var(--white);">We are <span id="superEmph">Helion.</span></h1>
             <p style="color: var(--whiteish);">Helion is a FIRST Robotics team founded in 2018, and is entirely
                 composed of high school and middle school students. We are located at Dulwich College Beijing, and our
@@ -50,7 +51,7 @@
     </div>
     <!-- Mission Statement-->
     <div id="block-mission-statement">
-        <div id="responsiveBlock">
+        <div class="responsiveBlock">
             <h2>Our Mission Statement</h2>
             <p><span style="font-weight:500">We aim to</span> encourage the STEM subject to young students whilst
                 inspiring and developing them by engaging them and teaching them essential engineering skills,
@@ -60,7 +61,7 @@
     </div>
     <!-- Frequently Asked Questions -->
     <div id="block-faq">
-        <div id="responsiveBlock">
+        <div class="responsiveBlock">
             <h2>FAQ</h2>
             <div id="qa">
                 <h3 id="question">What is the FRC?</h3>
@@ -90,14 +91,30 @@
         </div>
     </div>
     <!-- Our contact section -->
-    <div id="block-contacts">
-        <div id="responsiveBlock">
+    <div id="block-contacts" >
+        <div class="responsiveBlock fadein-text" id="contact-text">
             <h2 style="text-align: left;">Contact us</h2>
-            <p>Find us on social media!</b</p> <h2><a href="mailto:jingjing.chen@dulwich-beijing.cn;"><i class="fas fa-envelope"></i></a></h2>
-                <h2><a href="http://www.instagram.com/helion_robotics"><i class="fab fa-instagram"></i></a></h2>
-                <h2><a href="./newsletter/Helion Newsletter 16.11.2018.pdf" target="_blank"><i class="far fa-file-pdf"></i></a></h2>
+            <p>Find us on social media!</b></p>
+            <h2><a href="mailto:jingjing.chen@dulwich-beijing.cn;"><i class="fas fa-envelope"></i></a></h2>
+            <h2><a href="http://www.instagram.com/helion_robotics"><i class="fab fa-instagram"></i></a></h2>
+            <h2><a href="./newsletter/Helion Newsletter 16.11.2018.pdf" target="_blank"><i class="far fa-file-pdf"></i></a></h2>
         </div>
     </div>
+
+    <!-- SCRIPTS -->
+    <!-- jQuery -->
+    <script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap -->
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <!-- Scroll -->
+    <script type="text/javascript" src="./js/ScrollMagic.min.js"></script>
+    <!-- Indext Page -->
+    <script>
+        var controller = new ScrollMagic.Controller();
+        new ScrollMagic.Scene({ triggerElement: '#contact-text', duration: '120%', triggerHook: 0.8 })
+            .setClassToggle('#contact-text', 'fade-in')
+            .addTo(controller);
+    </script>
 </body>
 
 </html>

@@ -76,7 +76,7 @@ body {
     padding: 5%;
 }
 
-#responsiveBlock{
+.responsiveBlock{
     margin: 0 auto;
     max-width: 800px;
     color: var(--white);
@@ -94,7 +94,7 @@ body {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    padding: 2%;
+    padding: 1%;
     box-shadow: var(--shadow3);
     font-family: var(--mainFont);
 }
@@ -244,6 +244,22 @@ b{
     animation-timing-function: cubic-bezier(50);
     animation: bounce 2s infinite;
 }
+
+.fadein-text {
+    z-index: 6;
+
+    -webkit-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+    transform: translateY(50px);
+
+    opacity: 0;
+}
+
+.fade-in{
+    transform: translateY(0);
+    opacity: 1;
+}
+
 
 @keyframes bounce{
     from{
