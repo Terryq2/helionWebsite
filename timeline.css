@@ -13,60 +13,44 @@
     --color5: #402929;
     --color6: #020107;
     --shadow1: 0 0 10px rgba(0,0,0,0.2);
-    --shadow2: 0 0 60px rgba(255,255,255,0.75);
+    --shadow2: 0 0 60px rgba(255,255,255,0.6);
     --shadow3: 0 0 50px rgba(0,0,0,.3);
     --fullshadow: 0 0 400px rgba(0,0,0,0.6);
+    --buttonHeight: -6*30;
 }
 
 /* Set a background color */
 html body {
   background-color: var(--mainColor);
   font-family: Helvetica, sans-serif;
-  padding: 0;
-  margin: 0;
   width: 100%;
   height: 100%;
+  margin: 0 auto;
   overflow-x: hidden;
 }
 
-.timeline {
-  padding-left: 12%;
-}
-
-.slider {
-  position: fixed;
-  left: 0;
-  height: 100%;
-  width: 12%;
-  background-color: var(--color1);
-  box-shadow: var(--shadow3);
-}
-
-.slider img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
 .content {
-  padding-right: 40px;
+  margin-left: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-right: 20px;
 }
 
 .container {
   position: relative;
+  padding-top: 10px;
   z-index: 1;
-  width: 100%;
-  margin: 0px;
-  padding: 5px;
-  padding-left: 20px;
   box-shadow: var(--shadow1);
+  transition: .3s;
+  width: 100%;
+  height: 20vh;
 }
 
 .container:hover {
+  z-index: 10;
   transition: .3s;
   transform: scaleY(1.2);
   box-shadow: var(--fullshadow);
-  z-index: 1000000;
 }
 
 .container:hover .content {
@@ -76,75 +60,22 @@ html body {
 
 .container p {
   color: white;
-  font-size: 20px;
+  font-size: 17px;
 }
 
 .container h1 {
+  margin: 0 auto;
   color: white;
-  font-size: 35px;
-  margin-top: 0;
+  font-size: 31px;
 }
 
 .container h4 {
   color: white;
-  margin-bottom: 0;
-}
-
-#bar {
-  background-color: white;
-  width: 5px;
-  height: 80%;
-  position: relative;
-  top: 15%
-  left: 48%;
-  z-index: 0;
-  box-shadow: 0 0 20px rgb(255, 255, 255, 1)
-}
-
-.circle {
-  box-shadow: var(--shadow2);
-  z-index: 1;
-  position: relative;
-  border-radius: 50%;
-  width: 35px;
-  height: 35px;
-  border: 5px solid #ffffff;
-  background-color: #888888;
-  display: block;
+  font-size: 13px;
   margin: 0 auto;
 }
-
 .circle:hover {
   box-shadow: var(--shadow2)
-}
-
-#first {
-  top: 6%;
-}
-
-#second {
-  top: 19%;
-}
-
-#third {
-  top: 32%;
-}
-
-#fourth {
-  top: 45%;
-}
-
-#fifth {
-  top: 58%;
-}
-
-#sixth {
-  top: 80%;
-}
-
-#star {
-  position: fixed;
-  z-index: -2;
 }
 
 #yellow {
@@ -168,10 +99,7 @@ html body {
 }
 
 @media only screen and (max-width: 550px) {
-  .timeline{
-    padding-left: 20%;
-  }
-  .slider {
-    width: 20%;
+  .container {
+    height: 30vh;
   }
 }
