@@ -225,9 +225,37 @@ b{
     transform:scale(1.05);
 }
 
-#block-introduction, #block-mission-statement, #block-faq, #block-contacts{
+#block-introduction, #block-mission-statement, #block-faq, #block-contacts, #block-robot-reveal{
     box-shadow: var(--shadow3);
     padding: 12vh 5% 12vh 5%;
+}
+
+#block-robot-reveal{
+    background: var(--color4);
+    color: var(--white);
+}
+
+.flex-robot-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.weird-flex{
+    width: 500px;
+    height: auto;
+    filter: drop-shadow(0px 0px 10px rgba(0,0,0, 0.8));
+}
+
+.but-ok{
+    max-width: 500px;
+    background-color: var(--white);
+    margin-bottom: .5%;
+    padding: 2%;
+    margin-top: 5%;
+    box-shadow: var(--shadow2);
+    color: black;
+    
 }
 
 .arrow{
@@ -259,6 +287,9 @@ b{
     transform: translateY(0);
     opacity: 1;
 }
+
+
+
 
 
 @keyframes bounce{
