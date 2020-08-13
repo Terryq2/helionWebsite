@@ -58,6 +58,10 @@ main {
     width: 100vw;
 }
 
+#navrep {
+    height: 15vh;
+}
+
 .logo {
     display: none;
 }
@@ -74,6 +78,10 @@ main {
 
     .navbar {
         height: auto;
+    }
+
+    #navrep {
+        height: 10vh;
     }
 
     .logo {
