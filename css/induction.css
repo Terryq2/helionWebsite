@@ -74,6 +74,10 @@ main {
     display: none;
 }
 
+h2 i {
+    font-size: 0.5em;
+}
+
 @media only screen and (max-width: 768px) {
     
     .rounded-circle {
