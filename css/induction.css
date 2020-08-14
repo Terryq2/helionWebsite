@@ -70,6 +70,10 @@ main {
     height: 15vh;
 }
 
+.navbar-brand {
+    display: none;
+}
+
 @media only screen and (max-width: 768px) {
     
     .rounded-circle {
@@ -80,6 +84,10 @@ main {
         height: auto;
     }
 
+    .navbar-brand {
+        display: block;
+    }
+
     #navrep {
         height: 10vh;
     }
@@ -88,4 +96,10 @@ main {
         display: block;
     }
     
+}
+
+@media only screen and (max-width: 992px) and (min-width: 800px) {
+    .mx-auto {
+        display: none;
+    }
 }
